@@ -1,0 +1,8 @@
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\ChallengeTwo\bin\Debug\ChallengeTwo.exe.config
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\ChallengeTwo\bin\Debug\ChallengeTwo.exe
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\ChallengeTwo\bin\Debug\ChallengeTwo.pdb
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\ChallengeTwo\obj\Debug\ChallengeTwo.csproj.AssemblyReference.cache
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\ChallengeTwo\obj\Debug\ChallengeTwo.csproj.SuggestedBindingRedirects.cache
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\ChallengeTwo\obj\Debug\ChallengeTwo.csproj.CoreCompileInputs.cache
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\ChallengeTwo\obj\Debug\ChallengeTwo.exe
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\ChallengeTwo\obj\Debug\ChallengeTwo.pdb
