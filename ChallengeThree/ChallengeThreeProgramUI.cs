@@ -153,7 +153,8 @@ namespace ChallengeThree
                             break;
                         default:
                             Console.WriteLine("Please enter a valid option.");
-                            break;
+                            AnyKey();
+                            continue;
                     }
                 }
             }
