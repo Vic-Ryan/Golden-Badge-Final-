@@ -8,5 +8,20 @@ namespace _4ChallengeFour.ChallengeFourClasses
 {
     public class C4OutingsRepo
     {
+        protected readonly List<C4Outings> _outingDirectory = new List<C4Outings>();
+        //Create
+        public bool AddNewEvent(C4Outings outing)
+        {
+            int startingCount = _outingDirectory.Count();
+            _outingDirectory.Add(outing);
+            bool wasAdded = (_outingDirectory.Count() > startingCount);
+            return wasAdded;
+        }
+        //Read
+        public List<C4Outings> GetAllOutings()
+        {
+            return _outingDirectory;
+        }
+        //Update
     }
 }
