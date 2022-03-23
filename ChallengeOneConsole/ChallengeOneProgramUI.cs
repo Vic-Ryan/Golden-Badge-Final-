@@ -82,7 +82,7 @@ namespace ChallengeOneConsole
             menuItem.Description = Console.ReadLine();
 
             Console.Write("Please enter a price: ");
-            menuItem.Price = double.Parse(Console.ReadLine());
+            menuItem.Price = decimal.Parse(Console.ReadLine());
 
             Console.Write("Please enter a list of ingredients: ");
             menuItem.Ingredients = Console.ReadLine();
@@ -137,9 +137,9 @@ namespace ChallengeOneConsole
         //Helper Methods
         public void SeedContent()
         {
-            C1Menu hotCoffee = new C1Menu(1, "Komodo Coffee", "A hot cup to start your day, or to help keep it going.", "Ground Coffee, Hot Water", 3.20);
-            C1Menu pancakes = new C1Menu(2, "Stack Overflow Flapjacks", "Keep up your hard work with a hardy stack of pancakes!", "Eggs, Milk, Pancake Batter", 7.99);
-            C1Menu omellette = new C1Menu(3, "Fresh Omelette", "A classic omellete, filled with meat and veggies.", "Eggs, sausage, bacon, peppers, onions", 8.45);
+            C1Menu hotCoffee = new C1Menu(1, "Komodo Coffee", "A hot cup to start your day, or to help keep it going.", "Ground Coffee, Hot Water", 3.20m);
+            C1Menu pancakes = new C1Menu(2, "Stack Overflow Flapjacks", "Keep up your hard work with a hardy stack of pancakes!", "Eggs, Milk, Pancake Batter", 7.99m);
+            C1Menu omellette = new C1Menu(3, "Fresh Omelette", "A classic omellete, filled with meat and veggies.", "Eggs, sausage, bacon, peppers, onions", 8.45m);
 
             _repo.AddNewMenuItem(hotCoffee);
             _repo.AddNewMenuItem(pancakes);

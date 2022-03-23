@@ -10,7 +10,7 @@ namespace ChallengeOneConsole.ChallengeOneClasses
     {
         
         public C1Menu () { }
-        public C1Menu (int number, string name, string description, string ingredients, double price) 
+        public C1Menu(int number, string name, string description, string ingredients, decimal price) 
         {
             Number = number;
             Name = name;
@@ -22,6 +22,6 @@ namespace ChallengeOneConsole.ChallengeOneClasses
         public string Name { get; set; }
         public string Description { get; set; }
         public string Ingredients { get; set; } //Made into string for ease of putting in menu items
-        public double Price { get; set; }
+        public decimal Price { get; set; }
     }
 }
