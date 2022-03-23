@@ -57,10 +57,9 @@ namespace ChallengeOneConsole
             List<C1Menu> listOfItems = _repo.GetAllItems();
             foreach (C1Menu menuItem in listOfItems)
             {
-                Console.WriteLine($"{menuItem.Number}. {menuItem.Name}\n" +
-                $"${menuItem.Price}\n" +
-                $"Description: {menuItem.Description}\n" +
-                $"Ingredients: {menuItem.Ingredients}");
+                Console.WriteLine($"{menuItem.Number}. {menuItem.Name,-30}${menuItem.Price}\n" +
+                $"{menuItem.Description}\n" +
+                $"Ingredients: {menuItem.Ingredients,-40} Calories:{menuItem.Calories}");
                 Console.WriteLine();
             }
             AnyKey();
@@ -86,6 +85,9 @@ namespace ChallengeOneConsole
 
             Console.Write("Please enter a list of ingredients: ");
             menuItem.Ingredients = Console.ReadLine();
+
+            Console.Write("Please enter calory count: ");
+            menuItem.Calories = int.Parse(Console.ReadLine());
             if (_repo.AddNewMenuItem(menuItem))
             {
                 Console.WriteLine("Menu item added succesfully.");
@@ -118,7 +120,7 @@ namespace ChallengeOneConsole
                     Console.WriteLine($"{menuItem.Name} successfully removed."); //More interactive feedback, specifically says what was removed 
                     foreach (C1Menu newMenu in listOfItems)
                     {
-                        int menuNumber = listOfItems.IndexOf(newMenu) + 1;
+                        int menuNumber = listOfItems.IndexOf(newMenu) + 1; //Adjusts the number for each item in the menu, allowing the menu to always be in order
                         newMenu.Number = menuNumber;
                     }
                 }
@@ -137,9 +139,9 @@ namespace ChallengeOneConsole
         //Helper Methods
         public void SeedContent()
         {
-            C1Menu hotCoffee = new C1Menu(1, "Komodo Coffee", "A hot cup to start your day, or to help keep it going.", "Ground Coffee, Hot Water", 3.20m);
-            C1Menu pancakes = new C1Menu(2, "Stack Overflow Flapjacks", "Keep up your hard work with a hardy stack of pancakes!", "Eggs, Milk, Pancake Batter", 7.99m);
-            C1Menu omellette = new C1Menu(3, "Fresh Omelette", "A classic omellete, filled with meat and veggies.", "Eggs, sausage, bacon, peppers, onions", 8.45m);
+            C1Menu hotCoffee = new C1Menu(1, "Komodo Coffee", "A hot cup to start your day, or to help keep it going.", "Ground Coffee, Hot Water", 3.20m, 15);
+            C1Menu pancakes = new C1Menu(2, "Stack Overflow Flapjacks", "Keep up your hard work with a hardy stack of pancakes!", "Eggs, Milk, Pancake Batter", 7.99m, 450);
+            C1Menu omellette = new C1Menu(3, "Fresh Omelette", "A classic omellete, filled with meat and veggies.", "Eggs, sausage, bacon, peppers, onions", 8.45m, 250);
 
             _repo.AddNewMenuItem(hotCoffee);
             _repo.AddNewMenuItem(pancakes);
