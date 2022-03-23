@@ -73,7 +73,7 @@ namespace ChallengeOneConsole
 
             int numberOfItems = listOfItems.Count() + 1; //Adding one, since count starts at 0
             menuItem.Number = numberOfItems++; //Adds another one here, auto setting the number for the menu item, avoids going +2 each time.
-            //Won't work too well when items removed, may try and add a more dynamic number system later on
+
             Console.Write("Please enter item name: ");
             menuItem.Name = Console.ReadLine();
 
