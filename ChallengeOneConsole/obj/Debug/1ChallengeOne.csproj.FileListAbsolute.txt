@@ -1,0 +1,8 @@
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\ChallengeOneConsole\bin\Debug\ChallengeOneConsole.exe.config
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\ChallengeOneConsole\bin\Debug\ChallengeOneConsole.exe
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\ChallengeOneConsole\bin\Debug\ChallengeOneConsole.pdb
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\ChallengeOneConsole\obj\Debug\1ChallengeOne.csproj.AssemblyReference.cache
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\ChallengeOneConsole\obj\Debug\1ChallengeOne.csproj.SuggestedBindingRedirects.cache
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\ChallengeOneConsole\obj\Debug\1ChallengeOne.csproj.CoreCompileInputs.cache
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\ChallengeOneConsole\obj\Debug\ChallengeOneConsole.exe
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\ChallengeOneConsole\obj\Debug\ChallengeOneConsole.pdb

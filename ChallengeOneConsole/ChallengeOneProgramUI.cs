@@ -116,6 +116,11 @@ namespace ChallengeOneConsole
                 if (_repo.RemoveMenuItem(menuItem))
                 {
                     Console.WriteLine($"{menuItem.Name} successfully removed."); //More interactive feedback, specifically says what was removed 
+                    foreach (C1Menu newMenu in listOfItems)
+                    {
+                        int menuNumber = listOfItems.IndexOf(newMenu) + 1;
+                        newMenu.Number = menuNumber;
+                    }
                 }
                 else
                 {
