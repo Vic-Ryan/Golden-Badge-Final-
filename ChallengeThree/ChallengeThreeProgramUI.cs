@@ -62,10 +62,9 @@ namespace ChallengeThree
             foreach (KeyValuePair<int, List<string>> badge in listOfBadges)
             {
                 Console.Write($"{badge.Key,-12}");
-                foreach (var doors in badge.Value)
-                {
-                    Console.Write($"{doors},");
-                }
+                string[] doorArray = badge.Value.ToArray();
+                string seperateCards = string.Join(",", doorArray);
+                Console.Write(seperateCards);
                 Console.WriteLine();
             }
             AnyKey();
@@ -108,10 +107,9 @@ namespace ChallengeThree
                 {
                     Console.Clear();
                     Console.Write($"{badgeId} has access too ");
-                    foreach (var doors in doorsAvailable)
-                    {
-                        Console.Write($"{doors} ");
-                    }
+                    string[] doorArray = doorsAvailable.ToArray();
+                    string seperatedDoors = string.Join(" & ", doorArray);
+                    Console.Write(seperatedDoors);
                     Console.WriteLine();
                     Console.WriteLine("What would you like to do? \n" +
                         "1. Add door access \n" +
