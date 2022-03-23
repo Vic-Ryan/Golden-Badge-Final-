@@ -81,10 +81,12 @@ namespace ChallengeTwo
                 case "y":
                 case "yes":
                     _repo.RemoveClaim(firstClaim);
+                    Console.WriteLine("Claim taken, thank you.");
                     AnyKey();
                     break;
                 case "n":
                 case "no":
+                    Console.WriteLine("Claim not taken.");
                     AnyKey();
                     break;
                 default:
