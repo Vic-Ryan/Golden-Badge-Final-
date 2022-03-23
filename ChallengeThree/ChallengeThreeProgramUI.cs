@@ -120,7 +120,7 @@ namespace ChallengeThree
                     {
                         case "1":
                             Console.Write("Enter door to grant access: ");
-                            string addInput = Console.ReadLine();
+                            string addInput = Console.ReadLine().ToUpper();
                             bool wasAdded = _repo.UpdateDoorInformation(badgeId, addInput);
                             if (wasAdded)
                             {
