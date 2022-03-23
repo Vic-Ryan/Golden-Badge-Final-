@@ -9,8 +9,8 @@ namespace _4ChallengeFour.ChallengeFourClasses
     public enum EventType { Golf, Bowling, AmusementPark, Concert }
     public class C4Outings
     {
-        C4Outings() { }
-        C4Outings(EventType eventType, int attendees, DateTime date, decimal costPerPerson)
+        public C4Outings() { }
+        public C4Outings(EventType eventType, int attendees, DateTime date, decimal costPerPerson)
         {
             EventType = eventType;
             Attendees = attendees;
@@ -21,7 +21,7 @@ namespace _4ChallengeFour.ChallengeFourClasses
         public int Attendees { get; set; }
         public DateTime Date { get; set; }
         public decimal CostPerPerson { get; set; }
-        public decimal CostOfEvent
+        public decimal TotalCost
         {
             get
             {
