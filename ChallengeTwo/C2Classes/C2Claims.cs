@@ -10,7 +10,7 @@ namespace ChallengeTwo.C2Classes
     public class C2Claims
     {
         public C2Claims() { }
-        public C2Claims(int claimID, ClaimType claimType, string description, double claimAmount, DateTime dateOfIncident, DateTime dateOfClaim)
+        public C2Claims(int claimID, ClaimType claimType, string description, decimal claimAmount, DateTime dateOfIncident, DateTime dateOfClaim)
         {
             ClaimID = claimID;
             ClaimType = claimType;
@@ -23,7 +23,7 @@ namespace ChallengeTwo.C2Classes
         public int ClaimID { get; set; }
         public ClaimType ClaimType { get; set; }
         public string Description { get; set; }
-        public double ClaimAmount { get; set; }
+        public decimal ClaimAmount { get; set; }
         public DateTime DateOfIncident { get; set; }
         public DateTime DateOfClaim { get; set; }
         public bool IsValid { 

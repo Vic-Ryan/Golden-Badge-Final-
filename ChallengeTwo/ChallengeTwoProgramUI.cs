@@ -87,6 +87,10 @@ namespace ChallengeTwo
                 case "no":
                     AnyKey();
                     break;
+                default:
+                    Console.WriteLine("Invalid input, please use yes or no.");
+                    AnyKey();
+                    break;
             }
         }
 
@@ -98,24 +102,28 @@ namespace ChallengeTwo
             Console.Write("Claim ID: ");
             int newId = int.Parse(Console.ReadLine());
             newClaims.ClaimID = newId;
-            Console.Write("Claim Type: ");
+            Console.Write("Claims: 1. Car  2. Home  3. Theft \n" +
+                "Enter Claim: ");
             string claimType = Console.ReadLine().ToLower();
             switch (claimType)
             {
                 case "car":
+                case "1":
                     newClaims.ClaimType = ClaimType.Car;
                     break;
                 case "home":
+                case "2":
                     newClaims.ClaimType = ClaimType.Home;
                     break;
                 case "theft":
+                case "3":
                     newClaims.ClaimType = ClaimType.Theft;
                     break;
             }
             Console.Write("Enter Description: ");
             newClaims.Description = Console.ReadLine();
             Console.Write("Enter Amount: ");
-            double claimAmount = double.Parse(Console.ReadLine());
+            decimal claimAmount = decimal.Parse(Console.ReadLine());
             newClaims.ClaimAmount = claimAmount;
             Console.Write("Incident Date (MM/DD/YYYY): ");
             DateTime incidentDate = DateTime.Parse(Console.ReadLine());
@@ -144,9 +152,9 @@ namespace ChallengeTwo
 
         public void SeedContent()
         {
-            C2Claims claimOne = new C2Claims(1, ClaimType.Home, "Fire in the garage", 2500.00, new DateTime(2022, 2, 23), new DateTime(2022, 2, 26));
-            C2Claims claimTwo = new C2Claims(2, ClaimType.Theft, "Stolen Computer", 1200.00, new DateTime(2022, 3, 2), new DateTime(2022, 3, 13));
-            C2Claims claimThree = new C2Claims(3, ClaimType.Car, "Accident on 61", 345.00, new DateTime(2022, 2, 13), new DateTime(2022, 3, 20));
+            C2Claims claimOne = new C2Claims(1, ClaimType.Home, "Fire in the garage", 2500.00m, new DateTime(2022, 2, 23), new DateTime(2022, 2, 26));
+            C2Claims claimTwo = new C2Claims(2, ClaimType.Theft, "Stolen Computer", 1200.00m, new DateTime(2022, 3, 2), new DateTime(2022, 3, 13));
+            C2Claims claimThree = new C2Claims(3, ClaimType.Car, "Accident on 61", 345.00m, new DateTime(2022, 2, 13), new DateTime(2022, 3, 20));
 
             _repo.AddNewClaim(claimOne);
             _repo.AddNewClaim(claimTwo);
