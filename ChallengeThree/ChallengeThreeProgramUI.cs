@@ -96,6 +96,12 @@ namespace ChallengeThree
         {
             Console.Clear();
             Dictionary<int, List<string>> badgeDictionary = _repo.GetAllBadges();
+            Console.Write("Badges: ");
+            foreach (KeyValuePair<int, List<string>> badge in badgeDictionary)
+            {
+                Console.Write($"{badge.Key} ");
+            }
+            Console.WriteLine();
             Console.Write("Enter badge you wish to update: ");
             int badgeId = int.Parse(Console.ReadLine());
             List<string> doorsAvailable = new List<string>();
@@ -168,6 +174,13 @@ namespace ChallengeThree
         public void DeleteExistingBadge()
         {
             Console.Clear();
+            Dictionary<int, List<string>> listOfBadges = _repo.GetAllBadges();
+            Console.Write("Badges: ");
+            foreach (KeyValuePair<int, List<string>> badge in listOfBadges)
+            {
+                Console.Write($"{badge.Key}");
+            }
+            Console.WriteLine();
             Console.Write("Enter badge ID to delete: ");
             int userInput = int.Parse(Console.ReadLine());
             bool wasRemoved = _repo.RemoveBadge(userInput);
