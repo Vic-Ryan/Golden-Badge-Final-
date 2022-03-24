@@ -1,0 +1,8 @@
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\4ChallengeFour\bin\Debug\4ChallengeFour.exe.config
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\4ChallengeFour\bin\Debug\4ChallengeFour.exe
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\4ChallengeFour\bin\Debug\4ChallengeFour.pdb
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\4ChallengeFour\obj\Debug\4ChallengeFour.csproj.AssemblyReference.cache
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\4ChallengeFour\obj\Debug\4ChallengeFour.csproj.SuggestedBindingRedirects.cache
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\4ChallengeFour\obj\Debug\4ChallengeFour.csproj.CoreCompileInputs.cache
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\4ChallengeFour\obj\Debug\4ChallengeFour.exe
+C:\Users\vryan\OneDrive\Desktop\ElevenFiftyProjects\135SD\GoldBadgeConsoleApps\4ChallengeFour\obj\Debug\4ChallengeFour.pdb

@@ -15,7 +15,7 @@ namespace ChallengeOneTests
         public void Arrange()
         {
             _repo = new C1MenuRepo();
-            _menuItem = new C1Menu(10, "Name", "Desc", "Ingr", 1.00m);
+            _menuItem = new C1Menu(10, "Name", "Desc", "Ingr", 1.00m, 200);
 
             _repo.AddNewMenuItem(_menuItem);
         }

@@ -22,6 +22,11 @@ namespace _4ChallengeFour.ChallengeFourClasses
         {
             return _outingDirectory;
         }
+        public C4Outings GetOutingByType(EventType eventType)
+        {
+            return _outingDirectory.Where(o => o.EventType == eventType).SingleOrDefault();
+        }
         //Update
+
     }
 }

@@ -15,7 +15,7 @@ namespace ChallengeTwoTests
         public void Arrange()
         {
             _repo = new C2ClaimsRepo();
-            _claim = new C2Claims(1, ClaimType.Car, "Test Claim", 500.00, new DateTime(2022, 3, 21), new DateTime(2022, 2, 28));
+            _claim = new C2Claims(1, ClaimType.Car, "Test Claim", 500.00m, new DateTime(2022, 3, 21), new DateTime(2022, 2, 28));
 
             _repo.AddNewClaim(_claim);
         }
@@ -52,7 +52,7 @@ namespace ChallengeTwoTests
         [TestMethod]
         public void InvalidClaim_ShouldReturnFalse()
         {
-            C2Claims invalidClaim = new C2Claims(2, ClaimType.Home, "Testing Validity", 2.00, new DateTime(1999, 3, 21), new DateTime(2022, 3, 21));
+            C2Claims invalidClaim = new C2Claims(2, ClaimType.Home, "Testing Validity", 2.00m, new DateTime(1999, 3, 21), new DateTime(2022, 3, 21));
             Assert.IsFalse(invalidClaim.IsValid);
         }
 

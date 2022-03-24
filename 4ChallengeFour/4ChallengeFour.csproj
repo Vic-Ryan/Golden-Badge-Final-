@@ -7,7 +7,7 @@
     <ProjectGuid>{C4224BE4-AA67-458D-B4CE-83814FF2C510}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_4ChallengeFour</RootNamespace>
-    <AssemblyName>_4ChallengeFour</AssemblyName>
+    <AssemblyName>4ChallengeFour</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ChallengeFourClasses\C4Outings.cs" />
+    <Compile Include="ChallengeFourClasses\C4OutingsRepo.cs" />
+    <Compile Include="ChallengeFourProgram.cs" />
+    <Compile Include="ChallengeFourProgramUI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
