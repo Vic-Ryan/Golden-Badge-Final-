@@ -27,6 +27,13 @@ namespace _4ChallengeFour.ChallengeFourClasses
             return _outingDirectory.Where(o => o.EventType == eventType).SingleOrDefault();
         }
         //Update
-
+        //Delete
+        public bool RemoveEvent(C4Outings outing)
+        {
+            int startingCount = _outingDirectory.Count();
+            _outingDirectory.Remove(outing);
+            bool wasRemoved = (_outingDirectory.Count < startingCount);
+            return wasRemoved;
+        }
     }
 }
