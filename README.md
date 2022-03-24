@@ -48,9 +48,23 @@ UpdateDoorInformation(int badgeId, string doorAccess);
 RemoveBadge();
 
 //Remove Door information
-//RemoveDoorInformation(int badgeId, string doorAccess);
+RemoveDoorInformation(int badgeId, string doorAccess);
 ```
 
+The Company Outing application, marked as Challenge Four, works with a directory to add outings, and calculate their total cost by attendees and cost per person.
+```csharp
+//Adds a new outing
+AddNewEvent(C4Outings outing)
+
+//Returns all outings
+List<C4Outings> GetAllOutings()
+
+//Removes an outing
+RemoveEvent(C4Outings outing)
+
+//Gets a specific outing by type
+GetOutingByType(EventType eventType)
+```
 ## Contributions
 
 Pull requests not welcome at this time, as this project is a Final Project for Elevenfifty Academy. 
