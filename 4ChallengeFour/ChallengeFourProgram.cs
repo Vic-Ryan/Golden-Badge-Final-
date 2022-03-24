@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace _4ChallengeFour
 {
-    internal class ChallengeFourProgram
+    public class ChallengeFourProgram
     {
         static void Main(string[] args)
         {
+            ChallengeFourProgramUI ui = new ChallengeFourProgramUI();
+            ui.Run();
         }
     }
 }
