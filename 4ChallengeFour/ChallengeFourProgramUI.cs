@@ -35,7 +35,7 @@ namespace _4ChallengeFour
                         SeeAllOutings();
                         break;
                     case "2":
-                        //SeeOutingCostByType();
+                        SeeOutingCostByType();
                         break;
                     case "3":
                         //AddNewOuting();
@@ -69,11 +69,41 @@ namespace _4ChallengeFour
         public void SeeOutingCostByType()
         {
             Console.Clear();
-
-        }
-        public void SeeTotalCost()
-        {
-
+            
+            List<C4Outings> listOfOutings = _repo.GetAllOutings();
+            Console.WriteLine("Enter the event you wish to see: \n" +
+                "1. Amusement Parks \n" +
+                "2. Golf \n" +
+                "3. Concerts \n" +
+                "4. Bowling");
+            string userInput = Console.ReadLine();
+            switch (userInput)
+            {
+                case "1":
+                    EventType amusementParks = EventType.AmusementPark;
+                    OutingTypeCost(amusementParks, listOfOutings);
+                    AnyKey();
+                    break;
+                case "2":
+                    EventType golf = EventType.Golf;
+                    OutingTypeCost(golf, listOfOutings);
+                    AnyKey();
+                    break;
+                case "3":
+                    EventType concerts = EventType.Concert;
+                    OutingTypeCost(concerts, listOfOutings);
+                    AnyKey();
+                    break;
+                case "4":
+                    EventType bowling = EventType.Golf;
+                    OutingTypeCost(bowling, listOfOutings);
+                    AnyKey();
+                    break;
+                default:
+                    Console.WriteLine("Please enter a valid option.");
+                    AnyKey();
+                    break;
+            }
         }
 
         public void AddNewOuting()
@@ -92,9 +122,23 @@ namespace _4ChallengeFour
             C4Outings outingOne = new C4Outings(EventType.Concert, 23, new DateTime(2022, 3, 23), 30);
             C4Outings outingTwo = new C4Outings(EventType.Bowling, 18, new DateTime(2021, 8, 16), 17);
             C4Outings outingThree = new C4Outings(EventType.Golf, 10, new DateTime(2021, 7, 30), 20);
+            C4Outings outingFour = new C4Outings(EventType.AmusementPark, 31, new DateTime(2021, 9, 26), 31);
             _repo.AddNewEvent(outingOne);
             _repo.AddNewEvent(outingTwo);
             _repo.AddNewEvent(outingThree);
+            _repo.AddNewEvent(outingFour);
+        }
+        public void OutingTypeCost(EventType eventType, List<C4Outings> listOfOutings)
+        {
+            decimal totalCost = 0;
+            foreach (C4Outings outing in listOfOutings)
+            {
+                if (outing.EventType == eventType)
+                {
+                    totalCost = totalCost + outing.TotalCost;
+                }
+            }
+            Console.WriteLine($"Amusement Park Outings Total Cost is ${totalCost}");
         }
     }
 }
