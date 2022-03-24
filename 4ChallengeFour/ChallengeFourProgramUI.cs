@@ -38,7 +38,7 @@ namespace _4ChallengeFour
                         SeeOutingCostByType();
                         break;
                     case "3":
-                        //AddNewOuting();
+                        AddNewOuting();
                         break;
                     case "4":
                         continueToRun = false;
@@ -108,7 +108,62 @@ namespace _4ChallengeFour
 
         public void AddNewOuting()
         {
-
+            Console.Clear();
+            C4Outings newOuting = new C4Outings();
+            Console.WriteLine("Enter outing information");
+            Console.WriteLine("Enter event type: \n" +
+                "1. Amusement Park \n" +
+                "2. Golf \n" +
+                "3. Concert \n" +
+                "4. Bowling");
+            string userInput = Console.ReadLine();
+            switch (userInput)
+            {
+                case "1":
+                    newOuting.EventType = EventType.AmusementPark;
+                    break;
+                case "2":
+                    newOuting.EventType = EventType.Golf;
+                    break;
+                case "3":
+                    newOuting.EventType = EventType.Concert;
+                    break;
+                case "4":
+                    newOuting.EventType = EventType.Bowling;
+                    break;
+            }
+            Console.Write("Enter amount of attendees: ");
+            newOuting.Attendees = int.Parse(Console.ReadLine());
+            Console.Write("Enter event date (MM/DD/YYYY): ");
+            DateTime outingDate = DateTime.Parse(Console.ReadLine());
+            newOuting.Date = outingDate;
+            Console.Write("Enter cost per person: ");
+            newOuting.CostPerPerson = decimal.Parse(Console.ReadLine());
+            Console.Write($"Total cost for the outing: ${newOuting.TotalCost}. \n" +
+                $"Proceed to add outing? Y/N: ");
+            string addEvent = Console.ReadLine().ToLower();
+            switch (addEvent)
+            {
+                case "y":
+                case "yes":
+                    if (_repo.AddNewEvent(newOuting))
+                    {
+                        Console.WriteLine("Added outing successfully.");
+                        AnyKey();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Something went wrong trying to add outing.");
+                        AnyKey();
+                    }
+                    break;
+                case "n":
+                case "no":
+                    _repo.RemoveEvent(newOuting);
+                    Console.WriteLine("Outing not added to list.");
+                    AnyKey();
+                    break;
+            }
         }
 
         //Helper Methods
@@ -138,7 +193,7 @@ namespace _4ChallengeFour
                     totalCost = totalCost + outing.TotalCost;
                 }
             }
-            Console.WriteLine($"Amusement Park Outings Total Cost is ${totalCost}");
+            Console.WriteLine($"{eventType} Total Cost is ${totalCost}");
         }
     }
 }
